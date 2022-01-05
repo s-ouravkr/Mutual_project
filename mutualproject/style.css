@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0%;
+    padding-left:0;
+}
+
+
+/* CSS FOR NAV-BAR */
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    /* margin-bottom: 8px; */
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    /* margin-bottom: 0%; */
+    
+}
+.logo h1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0%;
+    margin-bottom: 2px;
+}
+.logo img{
+    width:2.2rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    font-family: 'Spartan', sans-serif;
+    height: 5rem;
+}
+.left-menu,.left-menu ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0%;
+}
+.left-menu ul li{
+    padding: 1rem;
+}
+.right-menu ul li{
+    padding: 1rem;
+}
+.left-menu ul li a , .right-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.left-menu ul li a:hover, .right-menu ul li a:hover{
+    color: yellowgreen;
+    border-bottom: 1px solid yellowgreen;
+}
+.right-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.right-menu-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.search{
+    margin-right:1rem;
+    /* margin-bottom: 5px; */
+}
+.search input{
+    border:none;
+    padding: .2rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+
+.search button{
+    border:none;
+    padding: .2rem .4rem; 
+    font-size: .8rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+}
+
+.hamburger1{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer; 
+}
+.hamburger2
+{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+
+}
+.search-icon{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    /* font-weight: 100; */
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+}
+.close-icon{
+    color: white;
+    font-size: 1.2rem;
+    display: none;
+    margin:0 1rem 0 1.3rem;
+    cursor: pointer;  
+}
+
+.allnavitems{
+    width: 100%;
+    background: yellowgreen;
+    height: 100%;
+    display: none;
+}
+.allnavitems ul{
+    list-style: none;
+}
+.allnavitems ul li{
+    padding: 1.2rem;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.418);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.allnavitems ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.close-btn{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+}
+
+@media(max-width:1060px)
+{   .hamburger2{
+    display: block;
+     }
+    .right-menu-list{
+        position: fixed;
+        height: 100vh;
+        top: 5rem;
+        right: -100vw;
+        background-color:yellowgreen;
+        /* display: block; */
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        color: white;
+        width: 20rem;
+        /* border-bottom-left-radius:50% ;    */
+    }
+    .right-menu-list.active{
+        right: 0vw;
+        position: absolute;
+    }
+    .close-icon.crossview{
+        display: block;
+    }
+     .hamburger2.ham2view{
+         display: none;
+     }
+
+}
+@media(max-width:900px)
+{   .hamburger1{
+    display: block;
+     }
+
+     .hamburger1.ham1view{
+         display: none;
+     }
+    .hamburger2{
+        display: none;
+    }
+    .left-menu ul{
+        display: none;
+    }
+    .search{
+        display:none;
+        position: fixed;
+        width: 100%;
+        background-color: yellow;
+        top: 5rem;
+        right: 0%;
+        margin: 0;
+    }
+
+    .search.show{
+        display: block;
+        position: absolute;
+    }
+
+    .search input{
+        width: 80%;
+        background-color: red;
+        height: 3rem;
+    }
+
+    .search button{
+        width: 20%;
+        height: 3rem;
+        font-size: .9rem;
+        font-weight: bold;
+    }
+    .search-icon{
+        display: block;
+    }
+    .search-icon.srciconview{
+        display: none;
+    }
+
+    .crossshow{
+        display: block;
+    }
+
+    .logo{
+        margin:0 auto;
+    }
+
+    .showallitems{
+        display: block;
+        position: fixed;
+    }
+    .close-btn.h1-cross{
+        display: block;
+    }
+
+}
+
+
+/* CSS FOR BANNER-1*/
+.container{
+    width: 90%;
+    margin: auto;
+}
+.banner1{
+    display: flex;
+    margin-top: .5rem;
+    align-items: center;
+    /* border: 1px solid lightgrey; */
+    background-color: rgba(253, 251, 251, 0.349);
+}
+.banner1 h1{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.banner1 p{
+    font-weight:600;
+    font-size: 1rem;
+    word-spacing: 5px;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+}
+.banner1 h3{
+    font-size: 1rem;
+}
+
+.banner1 img{
+    margin: auto;
+    background:url(/images/banner1.jpg) no-repeat center center/cover;
+    width: 50%;
+    height: 100%;
+
+}
+.subject-detail{
+    max-width:50% ;
+    width: 50%;
+    padding:1rem 1rem 1rem 1rem ;
+    background: rgba(255, 248, 220, 0.212);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.web-icons i{
+    font-size: 2rem;
+    margin-right:1rem;
+}
+@media(max-width:1217px){
+    .banner1 h1{
+        font-weight: bolder;
+        font-size: 1.3rem;
+        /* text-decoration: underline; */
+    }
+    .banner1 h3{
+        font-size: .6rem;
+        font-weight: bolder;
+    }
+    .banner1 p{
+        font-weight:600;
+        font-size: .8rem;
+        word-spacing: 0px;
+        line-height: 1rem;
+        letter-spacing: 0px;
+    }
+}
+
+@media(max-width:720px)
+{
+    .banner1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: .5rem;
+        align-items: center;
+        /* border: 1px solid lightgrey; */
+        background-color: rgba(253, 251, 251, 0.349);
+    }
+    .subject-detail{
+        max-width:100% ;
+        width: 100%;
+        padding:1rem 1rem 1rem 1rem ;
+        background: rgba(255, 248, 220, 0.212);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+    .banner1 img{
+        margin: auto;
+        background:url(/images/banner1.jpg) no-repeat center center/cover;
+        width: 90%;
+        height: 90%;
+    
+    }
+}
+
+/* Standard card design CSS */
+.cards::-webkit-scrollbar{
+    display: none;
+}
+
+
+.cards{
+    margin: 2rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(14rem,1fr));
+    gap: 1rem;
+    grid-auto-flow: column;
+    /* grid-template-columns: repeat(auto-fill,minmax(12rem,1fr)); */
+    gap: 1rem;
+    overflow-x: scroll;
+    overflow:auto;
+}
+.card{
+    width: 14rem;
+    height: 18rem;
+    margin-top: 1.5rem;
+    background-color: turquoise;
+    /* border: 1px solid rgba(185, 245, 20, 0.918); */
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.card-info{
+    padding-left: .6rem;
+}
+.card-info h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+.card ul{
+    list-style: none;
+}
+.card ul li{
+    /* font-family: ; */
+    font-size: .9rem;
+    margin: 0.2rem 0;
+    font-weight: 500;
+}
+.stars{
+    padding-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stars i{
+    font-weight: 100;
+    color: rgba(8, 8, 8, 0.712);
+}
+
+.stars h5{
+    padding-right: 1.5rem;
+    font-weight: bold;
+    color:whitesmoke;
+}
+
+@media(max-width:1100px)
+{   
+    .cards{
+        margin: 2rem 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(12rem,1fr));
+        gap: 1rem;
+    
+    }
+    .card{
+        width: 12rem;
+        height: 15rem;
+        margin-top: 1.5rem;
+        background-color: turquoise;
+        /* border: 1px solid rgba(185, 245, 20, 0.918); */
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    }
+    .card-info{
+        padding-left: .6rem;
+    }
+    .card-info h3{
+        font-size: .9rem;
+        font-weight: 600;
+        margin: 0.3rem 0;
+    }
+    .card ul{
+        list-style: none;
+    }
+    .card ul li{
+        /* font-family: ; */
+        font-size: .8rem;
+        margin: 0.1rem 0;
+        font-weight: 500;
+    }
+    .stars{
+        padding-top: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .stars i{
+        font-weight: 100;
+        font-size: .9rem;
+        color: rgba(8, 8, 8, 0.712);
+    }
+}
+
+/* Subject detsails CSS */
+
+.sub-detail{
+    padding:2rem 1rem;
+    background: rgba(252, 249, 242, 0.979);
+    border-radius: 5px;
+}
+
+.sub-detail h4{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: .8rem;
+}
+.sub-detail p{
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 30px;
+    word-spacing: 1px;
+}
+
+@media(max-width:675px){
+    .cards{margin: 2rem 0;
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fill,minmax(12rem,1fr));
+        gap: 1rem;
+        overflow-x: scroll;
+        overflow:auto;
+    }
+    .card{
+        width: 12rem;
+        height: 15rem;
+        margin-top: 1.5rem;
+        background-color: turquoise;
+        /* border: 1px solid rgba(185, 245, 20, 0.918); */
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    }
+    .card-info{
+        padding-left: .6rem;
+    }
+    .card-info h3{
+        font-size: .9rem;
+        font-weight: 600;
+        margin: 0.3rem 0;
+    }
+    .card ul{
+        list-style: none;
+    }
+    .card ul li{
+        /* font-family: ; */
+        font-size: .8rem;
+        margin: 0.1rem 0;
+        font-weight: 500;
+    }
+    .stars{
+        padding-top: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .stars i{
+        font-weight: 100;
+        font-size: .9rem;
+        color: rgba(8, 8, 8, 0.712);
+    }
+}

@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0%;
+    padding-left:0;
+}
+.container{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* CSS FOR NAV-BAR */
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    /* margin-bottom: 8px; */
+    color: white;
+    font-family: 'Spartan', sans-serif;
+    /* margin-bottom: 0%; */
+    
+}
+.logo h1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0%;
+    margin-bottom: 2px;
+}
+.logo img{
+    width:2.2rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    font-family: 'Spartan', sans-serif;
+    height: 5rem;
+}
+.left-menu,.left-menu ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0%;
+}
+.left-menu ul li{
+    padding: 1rem;
+}
+.right-menu ul li{
+    padding: 1rem;
+}
+.left-menu ul li a , .right-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.left-menu ul li a:hover, .right-menu ul li a:hover{
+    color: yellowgreen;
+    border-bottom: 1px solid yellowgreen;
+}
+.right-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.right-menu-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.search{
+    margin-right:1rem;
+    /* margin-bottom: 5px; */
+}
+.search input{
+    border:none;
+    padding: .2rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+
+.search button{
+    border:none;
+    padding: .2rem .4rem; 
+    font-size: .8rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+}
+
+.hamburger1{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer; 
+}
+.hamburger2
+{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+
+}
+.search-icon{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    /* font-weight: 100; */
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+}
+.close-icon{
+    color: white;
+    font-size: 1.2rem;
+    display: none;
+    margin:0 1rem 0 1.3rem;
+    cursor: pointer;  
+}
+
+.allnavitems{
+    width: 100%;
+    background: yellowgreen;
+    height: 100%;
+    display: none;
+}
+.allnavitems ul{
+    list-style: none;
+}
+.allnavitems ul li{
+    padding: 1.2rem;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.418);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.allnavitems ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.close-btn{
+    color: white;
+    display: none;
+    font-size: 1.2rem;
+    margin:0 1rem 0 1rem;
+    cursor: pointer;
+}
+
+@media(max-width:1060px)
+{   .hamburger2{
+    display: block;
+     }
+    .right-menu-list{
+        position: fixed;
+        height: 100vh;
+        top: 5rem;
+        right: -100vw;
+        background-color:yellowgreen;
+        /* display: block; */
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        color: white;
+        width: 20rem;
+        /* border-bottom-left-radius:50% ;    */
+    }
+    .right-menu-list.active{
+        right: 0vw;
+        position: absolute;
+    }
+    .close-icon.crossview{
+        display: block;
+    }
+     .hamburger2.ham2view{
+         display: none;
+     }
+
+}
+@media(max-width:900px)
+{   .hamburger1{
+    display: block;
+     }
+
+     .hamburger1.ham1view{
+         display: none;
+     }
+    .hamburger2{
+        display: none;
+    }
+    .left-menu ul{
+        display: none;
+    }
+    .search{
+        display:none;
+        position: fixed;
+        width: 100%;
+        background-color: yellow;
+        top: 5rem;
+        right: 0%;
+        margin: 0;
+    }
+
+    .search.show{
+        display: block;
+        position: absolute;
+    }
+
+    .search input{
+        width: 80%;
+        background-color: red;
+        height: 3rem;
+    }
+
+    .search button{
+        width: 20%;
+        height: 3rem;
+        font-size: .9rem;
+        font-weight: bold;
+    }
+    .search-icon{
+        display: block;
+    }
+    .search-icon.srciconview{
+        display: none;
+    }
+
+    .crossshow{
+        display: block;
+    }
+
+    .logo{
+        margin:0 auto;
+    }
+
+    .showallitems{
+        display: block;
+        position: fixed;
+    }
+    .close-btn.h1-cross{
+        display: block;
+    }
+
+}
+
+/* OVERVIEW CSS */
+
+.overview{
+    /* margin-top: 2rem; */
+    width:100%;
+    display: flex;
+    padding: 4rem 0;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    background-image:linear-gradient(black,#283048,#859398,#ffffff);
+}
+
+.left-content{
+    width: 50%;
+    margin-left: 10%;
+}
+.left-content h2{
+    font-weight:900;
+    font-size: 2rem;
+    font-family: 'Abril Fatface', cursive; 
+    color:rgb(245, 245, 245); 
+}
+.left-content p{
+    font-weight: 900;
+}
+.right-content{
+    margin-right: 10%;
+}
+#play{
+    font-size: 5rem;
+    color: rgba(22, 21, 21, 0.6);
+    position: absolute;
+    right: 40%;
+    top: 30%;
+}
+.right-content img{
+    width: 25rem;
+}
+
+/* WHAT YOU LEARN CSS  */
+
+
+
+.what_you_learn{
+    /* margin: 2rem; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    width: 100%;
+    padding:2em 2em 0 2em;
+}
+.what_you_learn h3{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+.what_you_learn ul{
+   list-style: none;
+   font-size: .9rem;
+}
+.what_you_learn ul li{
+    margin-top: 10px;
+    font-weight: 600;
+     
+}
+.what_you_learn i{
+    margin-right: 20px;
+
+}
+
+.course-includes{
+    /* display: flex; */
+    /* position: absolute; */
+    float: right;
+    position: sticky;
+    top: 8%;
+    padding:2rem;
+    border: 1px solid black;
+    width: 30%;
+    height: 70%;
+    /* margin-right: 15%; */
+    margin-top: 2rem;
+}
+
+.course-includes h3{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.course-includes ul{
+    list-style: none;
+    font-size: .8rem;
+ }
+ .course-includes ul li{
+    margin-top: 10px;
+    font-weight: 600;
+     
+}
+.course-includes i{
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+.enroll{
+    position: sticky;
+    width:80%;
+    margin-top: 2rem;
+}
+.enroll img{
+    width:100%;
+}
+.enroll button{
+    width:100%;
+    padding: .9rem;
+    border: none;
+    background-color: lightgrey;
+    font-weight: 900;
+}
+
+
+#buybtn{
+    width: 50%;
+    padding: .9rem;
+    background-color:rgba(204, 180, 180, 0.678);
+    border:none;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.863);
+}
+#addcart{
+    width: 49%;
+    padding: .9rem;
+    background-color:rgba(204, 180, 180, 0.678);
+    border:none;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.more-text-left,.more-text-right{
+    display:none;
+}
+
+.learn{
+    /* margin: 2rem; */
+    /* display:flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: auto;
+    margin-top: 2rem;
+    /* width: 70%; */
+    /* padding:2em; */
+    border: 1px solid black
+}
+
+.show-more-btn{
+    margin:1rem 0 1rem 2rem;
+}
+.show-more-btn span {
+    font-weight: 900;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.show{
+    display: inline;
+}
+
+
+/* css for syllabus */
+
+.subject-accordion{
+    width: 68%;
+    max-width: 50rem;
+    /* position: absolute; */
+    /* height: 66vh; */
+    border: 1px solid black;
+    /* margin-left: 15%; */
+    margin-top: 2rem;
+    /* margin-right: 3rem; */
+    display: inline-block;
+}
+
+.chapter-content ul{
+    list-style: none;
+}
+
+.subject-accordion .chapter-content{
+    position: relative;
+    margin: 1rem 1.5rem;
+}
+
+.subject-accordion .chapter-content .chapter{
+    position: relative;
+    padding: .8rem;
+    background: #2694af;
+    color: #fff;
+    cursor: pointer;
+}
+
+.subject-accordion .chapter-content .chapter::before{
+    content:'+';
+    position: absolute;
+    top: 50%;
+    right: 1.3rem;
+    transform:translateY(-50%);
+    font-size: 1.5em;
+}
+
+.subject-accordion .chapter-content.active .chapter::before{
+    content: '-';
+}
+.subject-accordion .chapter-content .content {
+    position: relative;
+    /* padding: 1rem; */
+    background: rgba(255, 255, 255, 0.795);
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    overflow-y: auto;
+}
+.content li{
+    margin:6px 0;
+}
+.subject-accordion .chapter-content.active .content{
+    height:100%;
+    padding: 2%;
+}
+
+.syllabus h3{
+    margin-left: 1.6rem;
+    font-size: 2rem;
+    font-family: 'Abril Fatface', cursive;  
+}
+
+.description{
+    width: 65%;
+    /* margin-left: 15%; */
+    margin-top: 3rem;
+}
+.description h3{
+    font-family: 'Abril Fatface', cursive; 
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.description p{
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+.description ul li{
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+}
+
+/* instructor detail */
+.instructor-photo{
+    margin-right: 1.5rem;
+}
+.instructor-photo img{
+    width: 7.5em;
+    border-radius:50%;
+}
+
+.cards{
+    width: 65%;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: 1rem auto;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+.instructor-label{
+    font-family: 'Abril Fatface', cursive; 
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+    width: 65%;
+    margin: 2rem 0 3rem 0;
+}
+
+.main h4 {
+    line-height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.profile{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.main-detail{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
